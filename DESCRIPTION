@@ -1,0 +1,34 @@
+Package: decimatoR
+Title: Identifies coordinate formats and coverts them to decimal degrees. 
+Version: 0.0.0.9000
+Authors@R: 
+          c(
+            person(
+              given = "Elizaveta", 
+              family = "Shcherbinina", 
+              email = "shcherbinina.elisaveta@gmail.com", 
+              role = c("aut", "cre"),
+              comment = c(ORCID = "0009-0002-8754-4985")
+            ),
+            person(
+              given = "Elina", 
+              family = "Takola", 
+              email = "elina.takola@ufz.de", 
+              role = "ctb",
+              comment = c(ORCID = "0000-0003-1268-5513")
+            )
+          )
+Description: This package identifies coordinate formats (Decimal Degree, Degrees Minutes, Degrees Minutes Seconds) and converts them to decimal degrees.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Imports: 
+    dplyr,
+    tidyr,
+    stringr,
+    rlang,
+    purrr
