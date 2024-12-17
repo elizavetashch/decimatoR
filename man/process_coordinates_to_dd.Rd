@@ -4,7 +4,7 @@
 \alias{process_coordinates_to_dd}
 \title{Process the dataset and covert all types of coordinates to decimal degrees.}
 \usage{
-process_coordinates_to_dd(df, longitude, latitude)
+process_coordinates_to_dd(df, longitude, latitude, option = "first")
 }
 \arguments{
 \item{df}{is a dataset}
@@ -12,6 +12,8 @@ process_coordinates_to_dd(df, longitude, latitude)
 \item{longitude}{its longitude column}
 
 \item{latitude}{its latitude column}
+
+\item{option}{is the parameter that is being passed to shorten_ddm_intervals_string, and can be set to "first" or "second"}
 }
 \value{
 a dataset with new columns with coordinates in decimal format

@@ -3,6 +3,7 @@
 #' @param df is a dataset
 #' @param longitude its longitude column
 #' @param latitude its latitude column
+#' @param option is the parameter that is being passed to shorten_ddm_intervals_string, and can be set to "first" or "second"
 #'
 #' @return a dataset with new columns with coordinates in decimal format
 #' @export
@@ -13,7 +14,7 @@
 #' longitude = "Longitude",
 #' latitude = "Latitude")
 #'
-process_coordinates_to_dd <- function(df, longitude, latitude) {
+process_coordinates_to_dd <- function(df, longitude, latitude, option = "first") {
   # Ensure longitude and latitude are strings representing column names
   longitude <- rlang::as_string(rlang::ensym(longitude))
   latitude <- rlang::as_string(rlang::ensym(latitude))
@@ -23,13 +24,13 @@ process_coordinates_to_dd <- function(df, longitude, latitude) {
 
   # Step 2: Apply `shorten_ddm_intervals_string` to longitude and latitude
   df <- dplyr::mutate(
-    df,
+    df, # NA FILTERING MISSING: SET LONG TEMP TO NA
     longitude_temp = dplyr::case_when(
-      long_coordinate_format == "DDM interval" ~ base::sapply(df[[longitude]], shorten_ddm_intervals_string),
+      stringr::str_detect(long_coordinate_format, "interval") ~ base::sapply(df[[longitude]], shorten_ddm_intervals_string, option = option),
       TRUE ~ df[[longitude]]
     ),
     latitude_temp = dplyr::case_when(
-      lat_coordinate_format == "DDM interval" ~ base::sapply(df[[latitude]], shorten_ddm_intervals_string),
+      stringr::str_detect(lat_coordinate_format, "interval") ~ base::sapply(df[[latitude]], shorten_ddm_intervals_string, option = option),
       TRUE ~ df[[latitude]]
     )
   )
@@ -79,7 +80,7 @@ process_coordinates_to_dd <- function(df, longitude, latitude) {
     longitude_decimal = base::mapply(apply_direction_vector, longitude_DD, longitude_direction),
     latitude_decimal = base::mapply(apply_direction_vector, latitude_DD, latitude_direction)
   )
-
+  # ENSURE THAT THE LONGITUDE_DECIMAL AND LATITUDE_DECIMAL ARE NUMERIC
   #df <-  dplyr::select(df, -c(longitude_temp:latitude_direction))
   return(df)
 }

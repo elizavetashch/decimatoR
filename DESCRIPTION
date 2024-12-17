@@ -1,5 +1,5 @@
 Package: decimatoR
-Title: Identifies coordinate formats and coverts them to decimal degrees. 
+Title: Identifies coordinate formats and coverts them to decimal degrees
 Version: 0.0.0.9000
 Authors@R: 
           c(
@@ -16,9 +16,13 @@ Authors@R:
               email = "elina.takola@ufz.de", 
               role = "ctb",
               comment = c(ORCID = "0000-0003-1268-5513")
-            )
+            ),
+                        person(
+              given = "Helmholtz Centre for Environmental Research", 
+              role = "cph"
           )
-Description: This package identifies coordinate formats (Decimal Degree, Degrees Minutes, Degrees Minutes Seconds) and converts them to decimal degrees.
+          )
+Description: This package identifies coordinate formats (Decimal Degree, Degrees Minutes, Degrees Minutes Seconds) and converts them to decimal degrees.decimatoR provides a ready-to-use, user-friendly workflow to process varying coordinates formats to the decimal degree format. Although there are packages that have similar functions, the novelty of decimatoR is that only one function has to be applied in order to process the whole dataset, identify coordinate format for each observation, and convert its coordinates to decimal degree format. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

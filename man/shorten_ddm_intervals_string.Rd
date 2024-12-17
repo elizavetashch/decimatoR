@@ -9,7 +9,7 @@ shorten_ddm_intervals_string(coordinate_strings, option = "first")
 \arguments{
 \item{coordinate_strings}{is a coordinate column}
 
-\item{option}{"first" or "second"}
+\item{option}{"first"(the part before the "-" in the interval) or "second" (the part after the "-" in the interval)}
 }
 \value{
 coordinate string with where interval is cut to the first or second part
