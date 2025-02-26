@@ -6,6 +6,8 @@
 #' @export
 #'
 #' @examples
+#' extract_direction_string("34.56E")
+#' extract_direction_string("34.56W")
 extract_direction_string <- function(coordinate_string) {
   direction_string <-  base::ifelse(stringr::str_detect(coordinate_string, "[SsWw]") | stringr::str_starts(coordinate_string, "^-"),    "-",    "+"
   )

@@ -15,3 +15,7 @@ returns a coordinate string for further processing with extract_direction_vector
 \description{
 Extract direction (East/South/West/North) as a minus or plus from a string
 }
+\examples{
+extract_direction_string("34.56E")
+extract_direction_string("34.56W")
+}

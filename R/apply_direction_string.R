@@ -7,6 +7,7 @@
 #' @export
 #'
 #' @examples
+#' apply_direction_string(12.56, "-")
 apply_direction_string <- function(string_decimal, string_direction) {
   result <- base::ifelse(string_direction == "-", -base::abs(string_decimal), base::abs(string_decimal))
   return(result)

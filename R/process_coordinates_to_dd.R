@@ -9,7 +9,7 @@
 #'
 #' @examples
 #' process_coordinates_to_dd(
-#' df = coord_data,
+#' coord_data,
 #' longitude = "Longitude",
 #' latitude = "Latitude")
 #'

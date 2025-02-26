@@ -17,3 +17,6 @@ string
 \description{
 Apply the direction to the decimal coordinate within a string
 }
+\examples{
+apply_direction_string(12.56, "-")
+}

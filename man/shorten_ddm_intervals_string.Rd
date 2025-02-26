@@ -17,3 +17,6 @@ coordinate string with where interval is cut to the first or second part
 \description{
 Shorten DDM intervals within a string
 }
+\examples{
+shorten_ddm_intervals_string("12ʹ45ʺ-12ʹ55ʺ", option = "first")
+}
