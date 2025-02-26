@@ -80,6 +80,6 @@ process_coordinates_to_dd <- function(df, longitude, latitude) {
     latitude_decimal = base::mapply(apply_direction_vector, latitude_DD, latitude_direction)
   )
 
-  #df <-  dplyr::select(df, -c(longitude_temp:latitude_direction))
+  df <-  dplyr::select(df, -c(longitude_temp:latitude_direction))
   return(df)
 }
