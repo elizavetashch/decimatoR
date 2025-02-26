@@ -12,8 +12,7 @@ decimatoR is a new R package for converting various formats of coordinates from 
 
 ### Usage Example
 ```R
-install.packages("devtools")
-devtools::install_github("elizavetashch/decimatoR")
+decimatoR::process_coordinates_to_dd(coord_data, longitude = Longitude, latitude = Latitude)
 ```
 
 ### Installation 
