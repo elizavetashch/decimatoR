@@ -16,7 +16,8 @@
 
 A **dataframe** in R consists of **columns**, where each column is a **vector**. Each **row** represents an observation, containing values for each column. However, because observations are entered separately, inconsistencies can arise.  
 
-### 🔹 The Problem: Inconsistent Data Formats  
+▶️ **The Problem: Inconsistent Data Formats** 
+
 Consider a dataframe containing geographic coordinates:  
 
 - The **first observation** might be recorded in **decimal degree (DD) format**, making its value **numeric**.  
@@ -24,27 +25,36 @@ Consider a dataframe containing geographic coordinates:
 
 Since R enforces **a single data type per column**, it **converts the entire column to character strings** if even one value is non-numeric.  
 
-### 🔹 The Solution: Processing Each Value as a String  
-To handle this, we need to:  
-✅ Process **each value (string) individually**.  
-✅ Apply a **function to the entire vector** (column).  
 
-### 🔹 Two Types of Functions in the Package  
+
+▶️ **The Solution: Processing Each Value as a String**  
+
+To handle this, we need to:  
+- Process **each value (string) individually**.  
+- Apply a **function to the entire vector** (column).
+
+
+
+▶️ **Two Types of Functions in the Package**  
+
 There are two categories of functions for processing coordinate data:  
 
-1️⃣ **Functions for Individual Strings**  
+**Functions for Individual Strings**  
    - Named **`_string` functions** (e.g., `extract_direction_string`).  
    - These operate on **a single string at a time**.  
 
-2️⃣ **Functions for Vectors (Columns) of Strings**  
+**Functions for Vectors (Columns) of Strings**  
    - Named **`_vector` functions** (e.g., `extract_direction_vector`).  
    - These apply the corresponding **_string function** to each element in the vector.  
    - Essentially, they **iterate through the column**, applying the _string function to each value.  
 
-🔹 **Key Insight:**  
+▶️ **Key Insight:**  
+
 The **_vector** function is just a wrapper that **applies the _string function to every row** in the column. The real work happens in the **_string function**.  
 
-### ♣️ Two Special Case Functions  
+
+▶️ **Two Special Case Functions**
+
 There are **two exceptions** that work directly on dataframes:  
 
 1. **`process_coordinates_to_dd`**  
