@@ -1,0 +1,9 @@
+
+
+```{r}
+(messy_coordinates <- decimatoR::messy_coordinates)
+```
+```{r}
+(decimatoR::process_coordinates_to_dd(messy_coordinates, longitude = Longitude, latitude = Latitude))
+```
+
