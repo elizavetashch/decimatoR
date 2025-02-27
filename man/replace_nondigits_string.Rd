@@ -15,3 +15,7 @@ string with replaced nondigits
 \description{
 Replace non-digits within a string
 }
+\examples{
+replace_nondigits_string("12ʹ45ʺ")
+replace_nondigits_string("9.99\"00E")
+}

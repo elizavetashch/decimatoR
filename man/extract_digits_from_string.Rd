@@ -15,3 +15,6 @@ list with first second and third digits saved as elements
 \description{
 Extract digits from a string after replace_nondigits_string/vecotr was applied
 }
+\examples{
+extract_digits_from_string("34.1';9E")
+}
