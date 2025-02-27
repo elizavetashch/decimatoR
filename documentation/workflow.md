@@ -208,7 +208,7 @@ The `apply_direction_string` function **adjusts the sign** of numeric coordinate
 ---
 
 ## Step 8
-###🧹 Cleaning the Output  
+### 🧹 Cleaning the Output  
 
 Finally, unnecessary intermediate and temporary columns are **removed** using `dplyr::select`.  
 
