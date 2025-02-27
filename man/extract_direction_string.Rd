@@ -7,7 +7,7 @@
 extract_direction_string(coordinate_string)
 }
 \arguments{
-\item{coordinate_string}{}
+\item{coordinate_string}{is either latitude or longitude column to which the function is applied}
 }
 \value{
 returns a coordinate string for further processing with extract_direction_vector

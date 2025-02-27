@@ -1,6 +1,6 @@
 #' Extract direction (East/South/West/North) as a minus or plus from a string
 #'
-#' @param coordinate_string
+#' @param coordinate_string is either latitude or longitude column to which the function is applied 
 #'
 #' @return returns a coordinate string for further processing with extract_direction_vector
 #' @export

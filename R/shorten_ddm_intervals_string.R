@@ -2,7 +2,7 @@
 #' Shorten DDM intervals within a string
 #'
 #' @param coordinate_strings is a coordinate column
-#' @param option "first" or "second"
+#' @param option "first"(the part before the "-" in the interval) or "second" (the part after the "-" in the interval) 
 #'
 #' @return coordinate string with where interval is cut to the first or second part
 #' @export

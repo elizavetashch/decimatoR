@@ -7,7 +7,7 @@
 extract_digits_from_vector(strings)
 }
 \arguments{
-\item{strings}{}
+\item{strings}{is the output of the extract_digits_from_string function}
 }
 \value{
 vector of lists aka a column
