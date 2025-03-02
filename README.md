@@ -2,6 +2,12 @@
   <img src="documentation/decimatoR_logo.png" alt="logo" width="100">
 </p>
 
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+[![DOI:10.5281/zenodo.14855697](http://img.shields.io/badge/DOI-10.5281/zenodo.14855697-B31B1B.svg)](https://doi.org/10.5281/zenodo.14855697)
+
+<hr>
+
+
 # decimatoR 
 ### The R package for converting coordinates formats to decimal degrees
 decimatoR is a new R package for converting various formats of coordinates from published literature to decimal degrees. As a general approach, decimatoR identifies the alternative coordinate formats and then performs a set of wrangling actions on latitude and longitude data to convert all of them into decimal degrees. The novelty of this package is that it deals with different formats of reported coordinates: degrees-minutes-seconds (DMS) and degrees-decimal-minutes (DDM). Another novelty is that this package can function not only for single coordinate values, but also for coordinate intervals, which is a common method to report geographic ranges: 12ʹ45ʺ–12ʹ55ʺ. 
