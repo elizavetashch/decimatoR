@@ -9,6 +9,13 @@ decimatoR is a new R package for converting various formats of coordinates from 
 
 📊This package is useful for spatial **data syntheses** and **meta-analyses**, since coordinates can be reported in various formats in literature. 
 
+### Installation 
+In the R console: 
+
+```R
+install.packages("devtools")
+devtools::install_github("elizavetashch/decimatoR")
+```
 
 ### Usage Example
 `coord_data` and `messy_coordinates` are two toy datasets available in the package, feel free to test it out yourself: 
@@ -18,7 +25,8 @@ decimatoR::process_coordinates_to_dd(coord_data, longitude = Longitude, latitude
 
 ```R
 View(messy_coordinates)
-``
+```
+
 | ID  | Longitude            | Latitude             |
 |-----|----------------------|----------------------|
 | 1   | 108°7′              | 34°12′              |
@@ -52,14 +60,6 @@ decimatoR::process_coordinates_to_dd(messy_coordinates, longitude = Longitude, l
 | 11  | 111.4870419109      | 28.9071209911000…  | DD                     | DD                    | 111.0             | 28.9             |
 | 12  | 50°05ʹW             | 25°10ʹS            | DDM                    | DDM                   | -50.1             | -25.2            |
 
-
-### Installation 
-In the R console: 
-
-```R
-install.packages("devtools")
-devtools::install_github("elizavetashch/decimatoR")
-```
 
 ### Dependencies 
 
