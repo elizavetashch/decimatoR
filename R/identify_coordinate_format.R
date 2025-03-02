@@ -45,14 +45,14 @@ identify_coordinate_format <- function(df, longitude, latitude) {
                         dplyr::case_when( # dplyr for conditional transformations
                           stringr::str_detect(!!rlang::sym(longitude), "^[\\+-]?((1[0-7]\\d|[0-9]?\\d)\\D+[0-6]?\\d(\\.\\d{1,})?|180(\\D+0)?)\\D+[EWew]?-[\\+-]?((1[0-7]\\d|[0-9]?\\d)\\D+[0-6]?\\d(\\.\\d{1,})?|180(\\D+0)?)\\D+[EWew]?$") ~ "DDM interval", # stringr for pattern matching
                           stringr::str_detect(!!rlang::sym(longitude), "^[\\+-]?((1[0-7]\\d|[1-9]?\\d)(\\.\\d{1,})?|180)\\D*[EWew]?-[\\+-]?((1[0-7]\\d|[1-9]?\\d)(\\.\\d{1,})?|180)\\D*[EWew]?$") ~ "DD interval", # DD interval
-                          stringr::str_detect(!!rlang::sym(longitude), "^[\\+-]?([1-7]?\\d{1,2}\\D+([0-5]?\\d|60)\\D+([0-5]?\\d|60)(\\.\\d+)?|180\\D+0\\D+0)\\D+[EWew]?-[\\+-]?([1-7]?\\d{1,2}\\D+([0-5]?\\d|60)\\D+([0-5]?\\d|60)(\\.\\d+)?|180\\D+0\\D+0)\\D+[EWew]?$") ~ "DMS interval" # DD interval
+                          stringr::str_detect(!!rlang::sym(longitude), "^[\\+-]?([1-7]?\\d{1,2}\\D+([0-5]?\\d|60)\\D+([0-5]?\\d|60)(\\.\\d+)?|180\\D+0\\D+0)\\D+[EWew]?-[\\+-]?([1-7]?\\d{1,2}\\D+([0-5]?\\d|60)\\D+([0-5]?\\d|60)(\\.\\d+)?|180\\D+0\\D+0)\\D+[EWew]?$") ~ "DMS interval" # DMS interval
                         ),
                         long_coordinate_format
                       ),
                       lat_coordinate_format = dplyr::if_else( # dplyr for conditional logic
                         is.na(lat_coordinate_format),
                         dplyr::case_when( # dplyr for conditional transformations
-                          stringr::str_detect(!!rlang::sym(latitude), "^[\\+-]?>(([1-8]?\\d)\\D+[0-6]?\\d(\\.\\d{1,})?|90(\\D+0)?)\\D+[NSns]?-[\\+-]?(([1-8]?\\d)\\D+[0-6]?\\d(\\.\\d{1,})?|90(\\D+0)?)\\D+[NSns]?$") ~ "DDM interval", # stringr for pattern matching
+                          stringr::str_detect(!!rlang::sym(latitude), "^[\\+-]?(([1-8]?\\d)\\D+[0-6]?\\d(\\.\\d{1,})?|90(\\D+0)?)\\D+[NSns]?-[\\+-]?(([1-8]?\\d)\\D+[0-6]?\\d(\\.\\d{1,})?|90(\\D+0)?)\\D+[NSns]?$") ~ "DDM interval", # stringr for pattern matching
                           stringr::str_detect(!!rlang::sym(latitude), "^[\\+-]?(([1-8]?\\d)(\\.\\d{1,})?|90)\\D*[NSns]?-[\\+-]?(([1-8]?\\d)(\\.\\d{1,})?|90)\\D*[NSns]?$") ~ "DD interval", # stringr for pattern matching
                           stringr::str_detect(!!rlang::sym(latitude), "^[\\+-]?(([1-8]?\\d)\\D+([0-5]?\\d|60)\\D+([0-5]?\\d|60)(\\.\\d+)?|90\\D+0\\D+0)\\D+[NSns]?-[\\+-]?(([1-8]?\\d)\\D+([0-5]?\\d|60)\\D+([0-5]?\\d|60)(\\.\\d+)?|90\\D+0\\D+0)\\D+[NSns]?$") ~ "DMS interval" # stringr for pattern matching
                         ),
