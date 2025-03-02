@@ -35,4 +35,6 @@ library(rlang)
 library(purrr)
 ```
 ### Package Workflow 
-To see the description of each function included in the package, please check out the workflow file :) 
+To see the description of each function included in the package, please check out the [workflow page on the wiki](../wiki/The-decimatoR-workflow)
+
+
