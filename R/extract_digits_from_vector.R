@@ -5,7 +5,6 @@
 #' @return vector of lists aka a column
 #' @export
 #'
-#' @examples
 extract_digits_from_vector <- function(strings) {
   results <- purrr::map(strings, extract_digits_from_string)
   return(results)

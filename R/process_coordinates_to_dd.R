@@ -10,7 +10,7 @@
 #'
 #' @examples
 #' process_coordinates_to_dd(
-#' df = coord_data,
+#' coord_data,
 #' longitude = "Longitude",
 #' latitude = "Latitude")
 #'
@@ -80,7 +80,11 @@ process_coordinates_to_dd <- function(df, longitude, latitude, option = "first")
     longitude_decimal = base::mapply(apply_direction_vector, longitude_DD, longitude_direction),
     latitude_decimal = base::mapply(apply_direction_vector, latitude_DD, latitude_direction)
   )
+<<<<<<< HEAD
  
   df <-  dplyr::select(df, -c(longitude_temp:latitude_direction))
+=======
+ df <-  dplyr::select(df, -c(longitude_temp:latitude_direction))
+>>>>>>> 3489bb6c2ca2509ef618d248ee7d7419e5c6b9d3
   return(df)
 }

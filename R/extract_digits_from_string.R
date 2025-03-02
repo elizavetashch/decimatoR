@@ -6,6 +6,7 @@
 #' @export
 #'
 #' @examples
+#' extract_digits_from_string("34.1';9E")
 extract_digits_from_string <- function(string) {
   # Split the string into parts based on semicolons using base R strsplit
   parts <- base::strsplit(string, ";", fixed = TRUE)[[1]]

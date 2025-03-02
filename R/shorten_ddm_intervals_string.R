@@ -8,6 +8,8 @@
 #' @export
 #'
 #' @examples
+#' shorten_ddm_intervals_string("12ʹ45ʺ-12ʹ55ʺ", option = "first")
+
 shorten_ddm_intervals_string <- function(coordinate_strings, option = "first") {
   # Extract the first part of the interval
   first <- stringr::str_extract(coordinate_strings, "^[^-]+")

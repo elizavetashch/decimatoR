@@ -7,6 +7,8 @@
 #' @export
 #'
 #' @examples
+#' replace_nondigits_string("12ʹ45ʺ")
+#' replace_nondigits_string("9.99\"00E")
 replace_nondigits_string <- function(string) {
   # Remove leading "-" if present
   string <- stringr::str_replace(string, "^-", "") # stringr for pattern replacement
