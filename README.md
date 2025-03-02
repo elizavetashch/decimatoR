@@ -5,7 +5,7 @@
 <h1 align="left">decimatoR</h1>
 
 <p align="left">
-  <b> An R package to convert coordinate formats into decimal degrees!</b><br>
+  <b> An R package to convert coordinate formats into decimal degrees</b><br>
 </p>
 
 <p align="left">
