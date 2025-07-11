@@ -2,12 +2,16 @@ Package: decimatoR
 Title: Identifies coordinate formats and coverts them to decimal degrees
 Version: 0.0.0.9000
 Authors@R: 
-          c(
-            person(
-              given = "GIVEN", 
-              family = "FAMILY", 
-              email = "EMAIL"
-          )
+  c(person(given = "Elizaveta",
+           family = "Shcherbinina,
+           role = c("aut", "cre"),
+           email = "shcherbinina.elisaveta@gmail.com",
+           comment = c(ORCID = "0009-0002-8754-4985")),
+    person(given = "Elina",
+           family = "Takola",
+           role = c("aut", "ctb"),
+           email = "elina.takola@ufz.de",
+           comment = c(ORCID = "0000-0003-1268-5513")))
 Description: This package identifies coordinate formats (Decimal Degree, Degrees Minutes, Degrees Minutes Seconds) and converts them to decimal degrees.decimatoR provides a ready-to-use, user-friendly workflow to process varying coordinates formats to the decimal degree format. Although there are packages that have similar functions, the novelty of decimatoR is that only one function has to be applied in order to process the whole dataset, identify coordinate format for each observation, and convert its coordinates to decimal degree format. 
 License: MIT + file LICENSE
 Encoding: UTF-8
